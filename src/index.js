@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <App />,
     elementError: <div>Error 404 page</div>,
     children: [
-      {path: "/spiderman",
+      {path: "/",
       element: <Spiderman />},
       {path: "/ironman",
       element: <Ironman />},

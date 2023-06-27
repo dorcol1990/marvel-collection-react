@@ -73,13 +73,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 140px 20px;
+    padding: 120px 0;
   }
   
   .left-side {
     flex: 1;
     display: flex;
     justify-content: center;
+    padding: 20px;
   }
   
   .page-image {
@@ -90,10 +91,12 @@ body {
   
   .right-side {
     flex: 1;
+    padding: 20px;
   }
 
   .right-side > p {
-    width: 400px;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
 
@@ -106,5 +109,11 @@ body {
     .navbar-btn {
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 768px){
+  .page-container {
+    flex-direction: column;
+  }
 }
   

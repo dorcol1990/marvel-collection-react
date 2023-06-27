@@ -11,7 +11,7 @@ function App() {
             <img src={marvel} alt="logo" className='navbar-logo-image' />
           </div>
           <div className="navbar-menu-wraper">
-              <NavLink to="/spiderman" className="navbar-navlink">Spider-man</NavLink>
+              <NavLink to="/" className="navbar-navlink">Spider-man</NavLink>
               <NavLink to="/ironman" className="navbar-navlink">Iron Man</NavLink>
               <NavLink to="/captainamerica" className="navbar-navlink">Captain America</NavLink>
               <NavLink to="/hulk" className="navbar-navlink">Hulk</NavLink>
