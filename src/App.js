@@ -1,8 +1,22 @@
 import marvel from './assets/marvel.png';
 import shield from './assets/shield.png';
 import { NavLink, Outlet } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+
+    const [showMenu, setShowMenu] = useState(false);
+  
+    function handleMenu() {
+      setShowMenu(!showMenu);
+    }
+  
+    function handleNavLink (){
+      setShowMenu(false)
+    }
+
+    const menuClass = showMenu ? "navbar-menu-wraper show-mobile-menu" : "navbar-menu-wraper";
+
   return (
     <div className="app">
       <nav className="navbar">
@@ -10,14 +24,14 @@ function App() {
           <div className='navbar-logo'>
             <img src={marvel} alt="logo" className='navbar-logo-image' />
           </div>
-          <div className="navbar-menu-wraper">
-              <NavLink to="/" className="navbar-navlink">Spider-man</NavLink>
-              <NavLink to="/ironman" className="navbar-navlink">Iron Man</NavLink>
-              <NavLink to="/captainamerica" className="navbar-navlink">Captain America</NavLink>
-              <NavLink to="/hulk" className="navbar-navlink">Hulk</NavLink>
-              <NavLink to="/thor" className="navbar-navlink">Thor</NavLink>
+          <div className={menuClass}>
+              <NavLink to="/" className="navbar-navlink" onClick={handleNavLink}>Spider-man</NavLink>
+              <NavLink to="/ironman" className="navbar-navlink" onClick={handleNavLink}>Iron Man</NavLink>
+              <NavLink to="/captainamerica" className="navbar-navlink" onClick={handleNavLink}>Captain America</NavLink>
+              <NavLink to="/hulk" className="navbar-navlink" onClick={handleNavLink}>Hulk</NavLink>
+              <NavLink to="/thor" className="navbar-navlink" onClick={handleNavLink}>Thor</NavLink>
           </div>
-          <div className="navbar-btn">
+          <div className="navbar-btn" onClick={handleMenu}>
           <img src={shield} alt="btn" className='navbar-btn-image' />
           </div>
         </div>
